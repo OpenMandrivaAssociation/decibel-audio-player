@@ -35,6 +35,7 @@ in specialized software, e.g. tagging.
 %install
 rm -rf $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT%{_menudir}
+
 # Mandrivaify the desktop file
 perl -pi -e "s#Categories=#Categories=X-MandrivaLinux-Multimedia-Sound;Sound;GNOME;#" ./res/decibel-audio-player.desktop
 
