@@ -19,6 +19,7 @@ Requires:	gstreamer0.10-plugins-good gstreamer0.10-plugins-base
 Requires:	gstreamer0.10-plugins-ugly python-pyxml
 Requires:	mutagen
 Requires:	python-notify
+BuildArch:	noarch
 
 %description
 Decibel is a GTK+ audio player designed for GNU/Linux, which aims at
