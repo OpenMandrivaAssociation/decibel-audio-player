@@ -57,6 +57,9 @@ EOF
 # Find the localization
 %find_lang %{name}
 
+# Useless dir
+rm -rf $RPM_BUILD_ROOT/usr/share/pixmaps
+
 %post
 %update_desktop_database
 %update_menus
