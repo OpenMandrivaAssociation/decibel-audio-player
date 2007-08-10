@@ -1,5 +1,5 @@
 %define	name	decibel-audio-player
-%define	version 0.04
+%define	version 0.05
 %define realver %version
 %define rel	1
 %define	release	%mkrel %rel
@@ -14,6 +14,7 @@ Group:		Sound
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License:	GPL
 BuildRequires:	pygtk2.0-devel python-devel
+BuildRequires:	desktop-file-utils
 Requires:	pygtk2.0 gstreamer0.10-python pygtk2.0-libglade
 Requires:	gstreamer0.10-plugins-good gstreamer0.10-plugins-base 
 Requires:	gstreamer0.10-plugins-ugly python-pyxml
@@ -35,10 +36,6 @@ in specialized software, e.g. tagging.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-mkdir -p $RPM_BUILD_ROOT%{_menudir}
-
-# Mandrivaify the desktop file
-perl -pi -e "s#Categories=#Categories=X-MandrivaLinux-Multimedia-Sound;Sound;GNOME;#" ./res/decibel-audio-player.desktop
 
 cat << EOF > ./start.sh
 #!/bin/bash
@@ -60,6 +57,14 @@ EOF
 # Useless dir
 rm -rf $RPM_BUILD_ROOT/usr/share/pixmaps
 
+desktop-file-install --vendor='' \
+	--dir=%buildroot%{_datadir}/applications \
+	--remove-category='Application' \
+	--remove-category='X-Ximian-Main' \
+	--remove-category='X-Red-Hat-Base' \
+	--add-category='Audio;Player' \
+	%buildroot%{_datadir}/applications/*.desktop
+
 %post
 %update_desktop_database
 %update_menus
@@ -78,5 +83,3 @@ rm -rf $RPM_BUILD_ROOT
 %_datadir/%name/
 %_datadir/applications/*
 %{_mandir}/*/*
-#%_datadir/pixmaps/*
-#%_menudir/%name
