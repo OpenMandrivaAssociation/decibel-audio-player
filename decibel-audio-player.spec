@@ -11,7 +11,6 @@ Source0:	http://decibel.silent-blade.org/uploads/Main/%{name}-%{version}.tar.gz
 Patch0:		decibel-audio-player-0.06.3-desktop-file.patch
 URL:		http://decibel.silent-blade.org/
 Group:		Sound
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License:	GPL
 Requires:	pygtk2.0 gstreamer0.10-python pygtk2.0-libglade
 Requires:	gstreamer0.10-plugins-good gstreamer0.10-plugins-base 
