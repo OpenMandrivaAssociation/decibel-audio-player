@@ -1,5 +1,5 @@
 %define	name	decibel-audio-player
-%define	version 0.10
+%define	version 0.11
 %define rel	1
 %define	release	%mkrel %rel
 
@@ -8,7 +8,6 @@ Summary:	A clean and user-friendly audio player
 Version:	%{version} 
 Release:	%{release} 
 Source0:	http://decibel.silent-blade.org/uploads/Main/%{name}-%{version}.tar.gz
-Patch0:		decibel-audio-player-0.08-desktop-file.patch
 URL:		http://decibel.silent-blade.org/
 Group:		Sound
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -31,7 +30,6 @@ in specialized software, e.g. tagging.
 
 %prep
 %setup -q -n %{name}-%{version}
-%patch0 -p0
 
 %install
 rm -rf $RPM_BUILD_ROOT
