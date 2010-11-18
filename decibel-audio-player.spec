@@ -1,5 +1,5 @@
 %define	name	decibel-audio-player
-%define	version 1.05
+%define	version 1.06
 %define rel	1
 %define	release	%mkrel %rel
 
