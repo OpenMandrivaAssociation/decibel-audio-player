@@ -1,12 +1,7 @@
-%define	name	decibel-audio-player
-%define	version 1.07
-%define rel	1
-%define	release	%mkrel %rel
-
-Name:		%{name}
+Name:		decibel-audio-player
 Summary:	A clean and user-friendly audio player
-Version:	%{version} 
-Release:	%{release} 
+Version:	1.07
+Release:	2
 Source0:	http://decibel.silent-blade.org/uploads/Main/%{name}-%{version}.tar.gz
 URL:		http://decibel.silent-blade.org/
 Group:		Sound
@@ -40,9 +35,7 @@ mv %buildroot/%{_datadir}/pixmaps/* %buildroot/%{_iconsdir}/
 
 %find_lang %name
 
-
 %files -f %name.lang
-%defattr(-,root,root)
 %doc ./doc/ChangeLog
 %_bindir/*
 %_datadir/%name/
