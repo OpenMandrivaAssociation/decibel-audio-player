@@ -1,7 +1,7 @@
 Name:		decibel-audio-player
 Summary:	A clean and user-friendly audio player
 Version:	1.07
-Release:	2
+Release:	3
 Source0:	http://decibel.silent-blade.org/uploads/Main/%{name}-%{version}.tar.gz
 URL:		http://decibel.silent-blade.org/
 Group:		Sound
