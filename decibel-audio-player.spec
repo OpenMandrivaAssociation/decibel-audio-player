@@ -6,9 +6,12 @@ Source0:	http://decibel.silent-blade.org/uploads/Main/%{name}-%{version}.tar.gz
 URL:		http://decibel.silent-blade.org/
 Group:		Sound
 License:	GPLv2+
-Requires:	pygtk2.0 gstreamer0.10-python pygtk2.0-libglade
-Requires:	gstreamer0.10-plugins-good gstreamer0.10-plugins-base 
-Requires:	gstreamer0.10-plugins-ugly
+Requires:	pygtk2.0 
+Requires: gstreamer1.0-python
+Requires: pygtk2.0-libglade
+Requires:	gstreamer1.0-plugins-good
+Requires: gstreamer1.0-plugins-base
+Requires:	gstreamer1.0-plugins-ugly
 Requires:	mutagen
 Requires:	python-notify
 BuildArch:	noarch
