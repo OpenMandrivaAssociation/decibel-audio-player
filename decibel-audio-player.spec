@@ -3,7 +3,7 @@ Summary:	A clean and user-friendly audio player
 Version:	1.08
 Release:	1
 Source0:	http://decibel.silent-blade.org/uploads/Main/%{name}-%{version}.tar.gz
-URL:		http://decibel.silent-blade.org/
+URL:		https://decibel.silent-blade.org/
 Group:		Sound
 License:	GPLv2+
 Requires:	pygtk2.0 
