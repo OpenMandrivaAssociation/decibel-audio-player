@@ -16,6 +16,7 @@ Requires:	mutagen
 Requires:	python-notify
 BuildArch:	noarch
 
+BuildRequires:	make
 %description
 Decibel is a GTK+ audio player designed for GNU/Linux, which aims at
 being very straightforward to use by means of a very clean and user
